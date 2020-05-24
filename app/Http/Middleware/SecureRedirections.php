@@ -20,6 +20,7 @@ class SecureRedirections
         if (!$request->secure() && App::environment() === 'production') {
             return redirect()->secure($request->getRequestUri());
         }
+        $request->setTrustedProxies( [ $request->getClientIp() ] ); 
 
         return $next($request); 
     }
