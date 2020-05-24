@@ -10,6 +10,7 @@ class UserController extends Controller
 {
     public function toggle_saved()
     {
+        error_log('Some message here.');
         $id = Input::get('id');
         $user = Auth::user();
         $saved = $user->saved;
