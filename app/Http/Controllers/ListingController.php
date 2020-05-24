@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Listing;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class ListingController extends Controller
 {
@@ -36,6 +37,8 @@ class ListingController extends Controller
     {
         $data = $this->get_listing($listing);
         $data = $this->add_meta_data($data, $request);
+        error_log('Some message here.');
+        Log::info('This is some useful information.');
         return view('app', ['data' => $data]);
     }
 
