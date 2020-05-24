@@ -12,7 +12,7 @@ class UserController extends Controller
     {
         error_log('Some message here.');
         $id = Input::get('id');
-        $user = Auth::user();
+        
         $saved = $user->saved;
         $key = array_search($id, $saved);
         if ($key === FALSE) {
