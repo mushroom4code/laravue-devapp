@@ -11,6 +11,8 @@ class ListingController extends Controller
 {
     private function get_listing($listing)
     {
+        error_log('Some message here.');
+        Log::info('This is some useful information.');
         $model = $listing->toArray();
         for($i = 1; $i <=4; $i++) {
             $model['image_' . $i] = asset('images/' . $listing->id . '/Image_' . $i . '.jpg');
