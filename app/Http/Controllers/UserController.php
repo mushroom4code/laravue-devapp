@@ -11,8 +11,9 @@ class UserController extends Controller
     public function toggle_saved()
     {
         error_log('Some message here.');
+        Log::info('This is some useful information.');
         $id = Input::get('id');
-        
+        $user = Auth::user();
         $saved = $user->saved;
         $key = array_search($id, $saved);
         if ($key === FALSE) {
