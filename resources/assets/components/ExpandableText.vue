@@ -3,7 +3,7 @@
         <p :class="{ contracted: contracted }">
             <slot></slot>
         </p>
-        <button v-if="contracted" class="more" @click="contracted = false">+ More</button>
+        <button v-if="contracted" class="more" @click="contracted = false">+ Еще</button>
     </div>
 </template>
 <script>

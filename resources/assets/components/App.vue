@@ -7,24 +7,29 @@
             </router-link>
             <ul class="links">
                 <li v-if="$store.state.auth">
-                    <router-link :to="{ name: 'saved' }">
-                        Saved
+                    <router-link :to="{ name: 'listing_create' }">
+                        Опубликовать свое жилье
                     </router-link>
                 </li>
                 <li v-if="$store.state.auth">
-                    <a @click="logout">Log Out</a>
+                    <router-link :to="{ name: 'saved' }">
+                        Сохраненные
+                    </router-link>
+                </li>
+                <li v-if="$store.state.auth">
+                    <a @click="logout">Выйти</a>
                     <form style="display: hidden" action="/logout" method="POST" id="logout">
                         <input type="hidden" name="_token" :value="csrf_token"/>
                     </form>
                 </li>
                 <li v-else>
                     <router-link :to="{ name: 'login' }">
-                        Log In
+                        Войти
                     </router-link>
                 </li>
                 <li v-if="!$store.state.auth">
                     <router-link :to="{ name: 'register' }">
-                        Sign up
+                        Регистрация
                     </router-link>
                 </li>
             </ul>

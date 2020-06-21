@@ -4,18 +4,18 @@
             <input type="hidden" name="_token" :value="csrf_token">
             <div class="form-control">
                 <input id="name" type="text" name="name"
-                       placeholder="Name" required autofocus>
+                       placeholder="Имя" required autofocus>
             </div>
             <div class="form-control">
                 <input id="email" type="email" name="email"
-                       placeholder="Email Address" required>
+                       placeholder="Email адрес" required>
             </div>
             <div class="form-control">
                 <input id="password" type="password" name="password"
-                       placeholder="Password" required>
+                       placeholder="Пароль" required>
             </div>
             <div class="form-control">
-                <button type="submit">Sign up</button>
+                <button type="submit">Зарегистрироваться</button>
             </div>
         </form>
     </div>

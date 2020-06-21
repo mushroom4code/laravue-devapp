@@ -16,7 +16,7 @@
     export default {
         computed: {
             listing_groups() {
-                return groupByCountry(this.$store.state.listing_summaries);
+                return groupByCountry(this.$store.state.listing_summaries, window.countries);
             }
         },
         components: {

@@ -10,6 +10,7 @@ import ListingPage from '../components/ListingPage.vue';
 import SavedPage from '../components/SavedPage.vue';
 import LoginPage from '../components/LoginPage.vue';
 import RegistrationPage from '../components/RegistrationPage.vue';
+import ListingCreatePage from '../components/ListingCreatePage.vue';
 
 let router = new VueRouter({
   mode: 'history',
@@ -18,7 +19,8 @@ let router = new VueRouter({
     { path: '/listing/:listing', component: ListingPage, name: 'listing' },
     { path: '/saved', component: SavedPage, name: 'saved' },
     { path: '/login', component: LoginPage, name: 'login' },
-    { path: '/register', component: RegistrationPage, name: 'register' }
+    { path: '/register', component: RegistrationPage, name: 'register' },
+    { path: '/listing_create', component: ListingCreatePage, name: 'listing_create' }
   ],
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }
@@ -27,6 +29,7 @@ let router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   let serverData = JSON.parse(window.vuebnb_server_data);
+  
   if (
     to.name === 'listing'
       ? store.getters.getListing(to.params.listing)

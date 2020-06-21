@@ -19,4 +19,8 @@ Route::get('/listing/{listing}', 'ListingController@get_listing_web');
 
 Route::get('/saved', 'ListingController@get_home_web')->middleware('auth');
 
+Route::get('/listing_create', 'ListingController@get_listing_create_web')->middleware('auth');
+
+Route::post('/listing_create', 'ListingController@post_listing_create_web');
+
 Auth::routes();

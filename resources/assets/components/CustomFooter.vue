@@ -4,7 +4,7 @@
         <div :class="containerClass">
             <p>
                 <img class="icon" src="/images/logo_grey.png">
-                <span><strong>Vuebnb</strong>. A full-stack Vue.js and Laravel demo app.</span>
+                <span><strong>Laravue</strong>. Полнофункциональное демо приложение Vue.js и Laravel.</span>
             </p>
         </div>
     </div>

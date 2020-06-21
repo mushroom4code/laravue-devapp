@@ -1,16 +1,16 @@
 let amenities = new Map();
-amenities.set('amenity_wifi', { title: 'Wireless Internet', icon: 'fa-wifi' });
-amenities.set('amenity_pets_allowed', { title: 'Pets Allowed', icon: 'fa-paw' });
-amenities.set('amenity_tv', { title: 'TV', icon: 'fa-television' });
-amenities.set('amenity_kitchen', { title: 'Kitchen', icon: 'fa-cutlery' });
-amenities.set('amenity_breakfast', { title: 'Breakfast', icon: 'fa-coffee' });
-amenities.set('amenity_laptop', { title: 'Laptop friendly workspace', icon: 'fa-laptop' });
+amenities.set('amenity_wifi', { title: 'Беспроводной интернет', icon: 'fa-wifi' });
+amenities.set('amenity_pets_allowed', { title: 'Животные разрешены', icon: 'fa-paw' });
+amenities.set('amenity_tv', { title: 'ТВ', icon: 'fa-television' });
+amenities.set('amenity_kitchen', { title: 'Кухня', icon: 'fa-cutlery' });
+amenities.set('amenity_breakfast', { title: 'Завтрак', icon: 'fa-coffee' });
+amenities.set('amenity_laptop', { title: 'Рабочее пространство для компьютера', icon: 'fa-laptop' });
 
 let prices = new Map();
-prices.set('price_per_night', 'Per night');
-prices.set('price_extra_people', 'Extra people');
-prices.set('price_weekly_discount', 'Weekly discount');
-prices.set('price_monthly_discount', 'Monthly discount');
+prices.set('price_per_night', 'За ночь');
+prices.set('price_extra_people', 'Дополнительные люди');
+prices.set('price_weekly_discount', 'Недельная скидка');
+prices.set('price_monthly_discount', 'Месячная скидка');
 
 let populateAmenitiesAndPrices = function(state) {
   if (!state) return {};
@@ -48,10 +48,10 @@ let populateAmenitiesAndPrices = function(state) {
 
 export { populateAmenitiesAndPrices };
 
-let groupByCountry = function (listings) {
+let groupByCountry = function (listings, countries) {
   if (!listings) return {};
   return listings.reduce(function (rv, x) {
-    let key = ['Taiwan', 'Poland', 'Cuba'].find(country => x.address.indexOf(country) > -1);
+    let key = countries.find(country => x.address.indexOf(country) > -1);
     if (!rv[key]) {
       rv[key] = [];
     }

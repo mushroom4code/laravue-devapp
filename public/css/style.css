@@ -2493,6 +2493,17 @@ body {
   }
 }
 
+.register-container {
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+@media (min-width: 374px) {
+  .register-container {
+    width: 350px;
+  }
+}
+
 hr {
   border: 0;
   border-top: 1px solid #dce0e0;

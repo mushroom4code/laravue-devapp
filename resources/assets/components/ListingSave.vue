@@ -29,7 +29,7 @@
                 }
             },
             message() {
-                return this.isListingSaved ? 'Saved' : 'Save';
+                return this.isListingSaved ? 'Сохранено' : 'Сохранить';
             }
         }
     }

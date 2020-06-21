@@ -44,7 +44,7 @@ export default new Vuex.Store({
   },
   actions: {
     toggleSaved({ commit, state }, id) {
-      console.log("dwadawdawda");
+      //console.log("dwadawdawda");
       if (state.auth) {
         console.log("breuh");
         axios.post('/api/user/toggle_saved', { id }).then(

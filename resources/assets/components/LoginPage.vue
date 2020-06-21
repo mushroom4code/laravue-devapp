@@ -4,14 +4,14 @@
             <input type="hidden" name="_token" :value="csrf_token">
             <div class="form-control">
                 <input id="email" type="email" name="email"
-                       placeholder="Email Address" required autofocus>
+                       placeholder="Email адрес" required autofocus>
             </div>
             <div class="form-control">
                 <input id="password" type="password" name="password"
-                       placeholder="Password" required>
+                       placeholder="Пароль" required>
             </div>
             <div class="form-control">
-                <button type="submit">Log in</button>
+                <button type="submit">Войти</button>
             </div>
         </form>
     </div>
@@ -22,6 +22,9 @@
             return {
                 csrf_token: window.csrf_token
             }
+        },
+        mounted() {
+            console.log(window.vuebnb_server_data);
         }
     }
 </script>

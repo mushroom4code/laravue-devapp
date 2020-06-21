@@ -1,6 +1,6 @@
 <template>
     <div class="listing-summary-group">
-        <h1>Places in {{ country }}</h1>
+        <h1>{{ country }}</h1>
         <div class="listing-carousel">
             <div class="controls">
                 <carousel-control dir="left" @change-image="change" :style="leftArrowStyle"></carousel-control>

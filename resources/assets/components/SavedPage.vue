@@ -1,6 +1,6 @@
 <template>
     <div id="saved" class="saved-container">
-        <h1>Saved listings</h1>
+        <h1>Сохраненные места</h1>
         <div v-if="listings.length" class="listing-summaries">
             <listing-summary
                     v-for="listing in listings"
@@ -8,7 +8,7 @@
                     :key="listing.id"
             ></listing-summary>
         </div>
-        <div v-else>No saved listings.</div>
+        <div v-else>Нет сохраненных мест.</div>
     </div>
 </template>
 <script>
