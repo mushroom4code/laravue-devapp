@@ -28,7 +28,7 @@
                     </template>
                 </feature-list>
             </div>
-            <form action="#"  @submit="alert_on_submit" name="form_201503890201341" id="rent_form" accept-charset="utf-8" autocomplete="on" class="jotform-form">
+            <form action="/"  @submit="alert_on_submit" name="form_201503890201341" id="rent_form" accept-charset="utf-8" autocomplete="on" class="jotform-form">
               <input type="hidden" name="formID" value="201503890201341">
               <input type="hidden" id="JWTContainer" value="">
               <input type="hidden" id="cardinalOrderNumber" value="">

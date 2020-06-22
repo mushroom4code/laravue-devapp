@@ -2155,13 +2155,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -5320,7 +5313,7 @@ var render = function() {
           {
             staticClass: "jotform-form",
             attrs: {
-              action: "#",
+              action: "/",
               name: "form_201503890201341",
               id: "rent_form",
               "accept-charset": "utf-8",
